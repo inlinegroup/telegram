@@ -1,12 +1,12 @@
 # telegram
 telegram bot methods
 
-with these methods you can: <br>
--- send message or any file <br>
--- send inline or menu keyboard <br>
--- edit or delete any message <br>
--- check user is join in channel <br>
--- forward message <br>
--- upload file without link <br>
--- send alert to user <br>
--- very easy and safe <br>
+<h2>with these methods you can: </h2>
+<h4>-- send message or any file</h4>
+<h4>-- send inline or menu keyboard</h4>
+<h4>-- edit or delete any message</h4>
+<h4>-- check user is join in channel</h4>
+<h4>-- forward message</h4>
+<h4>-- upload file without link</h4>
+<h4>-- send alert to user</h4>
+<h4>-- very easy and safe</h4>
