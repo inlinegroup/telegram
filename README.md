@@ -65,7 +65,7 @@ $tg = new telegram('PUT YOUR TOKEN BOT');
 ?>
 ```
 set token in codes
-<div id='1'></div>
+<a id='1'></a>
 ## Send simple text message
 ```
 $tg->id = $tg->input['id'];
