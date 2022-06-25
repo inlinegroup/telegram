@@ -83,7 +83,7 @@ above, but start it with `@`)
     Success! The new status is: DISABLED. /help
     ```
 
-### Require this package with Composer
+### First step
 
 Then download telegram.php file and copy to your host , next create bot.php file and copy this code to file
 ```
@@ -95,12 +95,11 @@ $tg = new telegram('PUT YOUR TOKEN BOT');
 
 ?>
 ```
-and run `composer update`
+set token in codes
 
-**or**
-
-run this command in your command line:
-
-```bash
-composer require longman/telegram-bot
+## Send text message
+```
+$tg->id = $tg->input['id'];
+$tg->text = 'Hello world !';
+$tg->send('message');
 ```
