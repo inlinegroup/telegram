@@ -138,9 +138,60 @@ $tg->caption = 'Hello world !';
 $tg->file = $tg->input['file'];
 $tg->send($tg->input['fileType']);
 ```
-## Send text message
+## Forward a message
+```
+$tg->id     = $tg->input['id'];
+$tg->msg_id = $tg->input['msg_id'];
+$tg->from   = $tg->input['id'];
+$tg->forward();
+```
+## Delete a message
 ```
 $tg->id = $tg->input['id'];
-$tg->text = 'Hello world !';
-$tg->send('message');
+$tg->msg_id = $tg->input['msg_id'];
+$tg->delete();
+```
+## Edit a text message
+```
+$tg->id     = $tg->input['id'];
+$tg->msg_id = $tg->input['msg_id'];
+$tg->text   = "message edited !";
+$tg->edit('message');
+```
+## Edit caption of message
+```
+$tg->id     = $tg->input['id'];
+$tg->msg_id = $tg->input['msg_id'];
+$tg->caption   = "caption edited !";
+$tg->edit('caption');
+```
+## Edit a file message
+```
+$tg->id = $tg->input['id'];
+$tg->msg_id = $tg->input['msg_id'];
+$tg->caption = "file edited !";
+$tg->file = 'file url';
+$tg->edit('file type'); // example : image, video, document, audio ,....
+```
+## Send a alert
+```
+$tg->id         = $tg->input['id'];
+$tg->query_id   = $tg->input['query_id'];
+$tg->show_alert = true;
+$tg->text       = 'Hello world !';
+$tg->alert();
+```
+## Send location
+```
+$tg->id     = $tg->input['id'];
+$tg->height = 10;
+$tg->width  = 10;
+$tg->send('location');
+```
+## Send contact
+```
+$tg->id    = $tg->input['id'];
+$tg->phone = '09027282364';
+$tg->name  = 'inline group';
+$tg->send('contact');
 ```
