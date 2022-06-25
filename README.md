@@ -97,6 +97,47 @@ $tg = new telegram('PUT YOUR TOKEN BOT');
 ```
 set token in codes
 
+## Send simple text message
+```
+$tg->id = $tg->input['id'];
+$tg->text = 'Hello world !';
+$tg->send('message');
+```
+## Send text message with inline keyboard
+```
+$tg->id = $tg->input['id'];
+$tg->text = 'Hello world !';
+$tg->keyboard = [[['text'=>'Open google','url'=>'https://google.com']],[['text'=>'Restart','url'=>'/start']]];
+$tg->send('message');
+```
+## Send text message with menu keyboard
+```
+$tg->id = $tg->input['id'];
+$tg->text = 'Hello world !';
+$tg->keyboard = [['key 1','key 2']];
+$tg->send('message');
+```
+## Send file message from url
+```
+$tg->id = $tg->input['id'];
+$tg->caption = 'Hello world !';
+$tg->file = 'file url';
+$tg->send('file type'); // example : image, video, document, audio ,....
+```
+## Send file message from host
+```
+$tg->id = $tg->input['id'];
+$tg->caption = 'Hello world !';
+$tg->file = local('path of file');
+$tg->send('file type'); // example : image, video, document, audio ,....
+```
+## Send file message from file key
+```
+$tg->id = $tg->input['id'];
+$tg->caption = 'Hello world !';
+$tg->file = $tg->input['file'];
+$tg->send($tg->input['fileType']);
+```
 ## Send text message
 ```
 $tg->id = $tg->input['id'];
