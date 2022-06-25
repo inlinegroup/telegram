@@ -1,4 +1,4 @@
-# telegram
+# telegram API bot
 telegram bot methods
 
 <h1>with these methods you can: </h1>
