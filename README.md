@@ -1,12 +1,17 @@
 # telegram
 telegram bot methods
 
-<h2>with these methods you can: </h2>
-<h4>-- send message or any file</h4>
-<h4>-- send inline or menu keyboard</h4>
-<h4>-- edit or delete any message</h4>
-<h4>-- check user is join in channel</h4>
-<h4>-- forward message</h4>
-<h4>-- upload file without link</h4>
-<h4>-- send alert to user</h4>
-<h4>-- very easy and safe</h4>
+<h1>with these methods you can: </h1>
+<h3>-- send message or any file</h3>
+<h3>-- send inline or menu keyboard</h3>
+<h3>-- edit or delete any message</h3>
+<h3>-- check user is join in channel</h3>
+<h3>-- forward message</h3>
+<h3>-- upload file without link</h3>
+<h3>-- send alert to user</h3>
+<h3>-- very easy and safe</h3>
+<br>
+<h1>Examples :</h1>
+<h2>send message :</h2>
+<h4>$tg->text     = 'Opened menu keyboard !';</h4>
+<h4>$tg->send('message');</h4>
