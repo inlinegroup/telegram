@@ -2,7 +2,7 @@
 
 require_once "telegram.php";
 
-$tg = new telegram('1827553766:AAFGNkybEEO2egAnL_tn79xsJVRpuR171HY');
+$tg = new telegram('YOUR TOKEN');
 switch($tg->input['text']){
     case '/start':
         $tg->id       = $tg->input['id'];     // optional
