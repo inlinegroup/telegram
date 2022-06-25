@@ -12,7 +12,7 @@ telegram bot methods
 <h3><a href='#8'>-- send location or contact</a></h3>
 <h3>-- very easy and safe</h3>
 <br>
-### Create your first bot
+<h1>Create your first bot</h1>
 
 1. Message [`@BotFather`](https://telegram.me/BotFather) with the following text: `/newbot`
 
