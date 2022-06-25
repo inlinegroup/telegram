@@ -16,3 +16,4 @@ telegram bot methods
 ```php
 <h4>$tg->text     = 'Opened menu keyboard !';</h4>
 <h4>$tg->send('message');</h4>
+```
