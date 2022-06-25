@@ -14,6 +14,6 @@ telegram bot methods
 <h1>Examples :</h1>
 <h2>send message :</h2>
 ```
-<h4>$tg->text     = 'Opened menu keyboard !';</h4>
-<h4>$tg->send('message');</h4>
+$tg->text = 'Opened menu keyboard !';
+$tg->send('message');
 ```
