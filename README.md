@@ -51,41 +51,10 @@ telegram bot methods
     ```
 
 7. Note down the 'token' mentioned above.
+<br>
+# First step
 
-*Optionally set the bot privacy:*
-
-1. Send `/setprivacy` to `@BotFather`.
-
-   ![BotFather later conversation](https://user-images.githubusercontent.com/9423417/60736340-26439080-9f46-11e9-970f-8f33bbe39c5f.png)
-
-2. `@BotFather` replies with:
-
-    ```
-    Choose a bot to change group messages settings.
-    ```
-
-3. Type (or select) `@telesample_bot` (change to the username you set at step 5
-above, but start it with `@`)
-
-4. `@BotFather` replies with:
-
-    ```
-    'Enable' - your bot will only receive messages that either start with the '/' symbol or mention the bot by username.
-    'Disable' - your bot will receive all messages that people send to groups.
-    Current status is: ENABLED
-    ```
-
-5. Type (or select) `Disable` to let your bot receive all messages sent to a group.
-
-6. `@BotFather` replies with:
-
-    ```
-    Success! The new status is: DISABLED. /help
-    ```
-
-### First step
-
-Then download telegram.php file and copy to your host , next create bot.php file and copy this code to file
+Download telegram.php file and copy to your host , next create bot.php file and copy this code to file
 ```
 <?php
 
