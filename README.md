@@ -2,7 +2,7 @@
 telegram bot methods
 
 <h1>with these methods you can: </h1>
-<h3>-- send message or any file</h3>
+<h3><a href='#1'>-- send message or any file</a></h3>
 <h3>-- send inline or menu keyboard</h3>
 <h3>-- edit or delete any message</h3>
 <h3>-- check user is join in channel</h3>
@@ -52,7 +52,7 @@ telegram bot methods
 
 7. Note down the 'token' mentioned above.
 <br>
-# First step
+<h1>First step</h1>
 
 Download telegram.php file and copy to your host , next create bot.php file and copy this code to file
 ```
@@ -65,7 +65,7 @@ $tg = new telegram('PUT YOUR TOKEN BOT');
 ?>
 ```
 set token in codes
-
+<div id='1'></div>
 ## Send simple text message
 ```
 $tg->id = $tg->input['id'];
