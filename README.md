@@ -17,3 +17,6 @@ telegram bot methods
 $tg->text = 'Opened menu keyboard !';
 $tg->send('message');
 ```
+```
+    Alright, a new bot. How are we going to call it? Please choose a name for your bot.
+    ```
