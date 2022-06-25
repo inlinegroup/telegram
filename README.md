@@ -3,12 +3,12 @@ telegram bot methods
 
 <h1>with these methods you can: </h1>
 <h3><a href='#1'>-- send message or any file</a></h3>
-<h3>-- send inline or menu keyboard</h3>
-<h3>-- edit or delete any message</h3>
-<h3>-- check user is join in channel</h3>
-<h3>-- forward message</h3>
-<h3>-- upload file without link</h3>
-<h3>-- send alert to user</h3>
+<h3><a href='#2'>-- send inline or menu keyboard</a></h3>
+<h3><a href='#3'>-- edit or delete any message</a></h3>
+<h3><a href='#4'>-- check user is join in channel</a></h3>
+<h3><a href='#5'>-- forward message</a></h3>
+<h3><a href='#6'>-- upload file without link</a></h3>
+<h3><a href='#7'>-- send alert to user</a></h3>
 <h3>-- very easy and safe</h3>
 <br>
 ### Create your first bot
@@ -72,6 +72,7 @@ $tg->id = $tg->input['id'];
 $tg->text = 'Hello world !';
 $tg->send('message');
 ```
+<a id='2'></a>
 ## Send text message with inline keyboard
 ```
 $tg->id = $tg->input['id'];
@@ -93,6 +94,7 @@ $tg->caption = 'Hello world !';
 $tg->file = 'file url';
 $tg->send('file type'); // example : image, video, document, audio ,....
 ```
+<a id='6'></a>
 ## Send file message from host
 ```
 $tg->id = $tg->input['id'];
@@ -107,6 +109,7 @@ $tg->caption = 'Hello world !';
 $tg->file = $tg->input['file'];
 $tg->send($tg->input['fileType']);
 ```
+<a id='5'></a>
 ## Forward a message
 ```
 $tg->id     = $tg->input['id'];
@@ -114,6 +117,7 @@ $tg->msg_id = $tg->input['msg_id'];
 $tg->from   = $tg->input['id'];
 $tg->forward();
 ```
+<a id='3'></a>
 ## Delete a message
 ```
 $tg->id = $tg->input['id'];
@@ -142,6 +146,7 @@ $tg->caption = "file edited !";
 $tg->file = 'file url';
 $tg->edit('file type'); // example : image, video, document, audio ,....
 ```
+<a id='7'></a>
 ## Send a alert
 ```
 $tg->id         = $tg->input['id'];
@@ -163,4 +168,14 @@ $tg->id    = $tg->input['id'];
 $tg->phone = '09027282364';
 $tg->name  = 'inline group';
 $tg->send('contact');
+```
+<a id='4'></a>
+## check is join user in channel
+First you should set bot as admin in channel
+```
+if(is_join("@channel")=="left"){
+    // user is join
+}else{
+    // user is not join
+}
 ```
