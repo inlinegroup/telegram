@@ -9,6 +9,7 @@ telegram bot methods
 <h3><a href='#5'>-- forward message</a></h3>
 <h3><a href='#6'>-- upload file without link</a></h3>
 <h3><a href='#7'>-- send alert to user</a></h3>
+<h3><a href='#8'>-- send location or contact</a></h3>
 <h3>-- very easy and safe</h3>
 <br>
 ### Create your first bot
@@ -68,45 +69,45 @@ set token in codes
 <a id='1'></a>
 ## Send simple text message
 ```
-$tg->id = $tg->input['id'];
+$tg->id   = $tg->input['id'];
 $tg->text = 'Hello world !';
 $tg->send('message');
 ```
 <a id='2'></a>
 ## Send text message with inline keyboard
 ```
-$tg->id = $tg->input['id'];
-$tg->text = 'Hello world !';
+$tg->id       = $tg->input['id'];
+$tg->text     = 'Hello world !';
 $tg->keyboard = [[['text'=>'Open google','url'=>'https://google.com']],[['text'=>'Restart','url'=>'/start']]];
 $tg->send('message');
 ```
 ## Send text message with menu keyboard
 ```
-$tg->id = $tg->input['id'];
-$tg->text = 'Hello world !';
+$tg->id       = $tg->input['id'];
+$tg->text     = 'Hello world !';
 $tg->keyboard = [['key 1','key 2']];
 $tg->send('message');
 ```
 ## Send file message from url
 ```
-$tg->id = $tg->input['id'];
+$tg->id      = $tg->input['id'];
 $tg->caption = 'Hello world !';
-$tg->file = 'file url';
+$tg->file    = 'file url';
 $tg->send('file type'); // example : image, video, document, audio ,....
 ```
 <a id='6'></a>
 ## Send file message from host
 ```
-$tg->id = $tg->input['id'];
+$tg->id      = $tg->input['id'];
 $tg->caption = 'Hello world !';
-$tg->file = local('path of file');
+$tg->file    = local('path of file');
 $tg->send('file type'); // example : image, video, document, audio ,....
 ```
 ## Send file message from file key
 ```
-$tg->id = $tg->input['id'];
+$tg->id      = $tg->input['id'];
 $tg->caption = 'Hello world !';
-$tg->file = $tg->input['file'];
+$tg->file    = $tg->input['file'];
 $tg->send($tg->input['fileType']);
 ```
 <a id='5'></a>
@@ -120,7 +121,7 @@ $tg->forward();
 <a id='3'></a>
 ## Delete a message
 ```
-$tg->id = $tg->input['id'];
+$tg->id     = $tg->input['id'];
 $tg->msg_id = $tg->input['msg_id'];
 $tg->delete();
 ```
@@ -133,17 +134,17 @@ $tg->edit('message');
 ```
 ## Edit caption of message
 ```
-$tg->id     = $tg->input['id'];
-$tg->msg_id = $tg->input['msg_id'];
-$tg->caption   = "caption edited !";
+$tg->id      = $tg->input['id'];
+$tg->msg_id  = $tg->input['msg_id'];
+$tg->caption = "caption edited !";
 $tg->edit('caption');
 ```
 ## Edit a file message
 ```
-$tg->id = $tg->input['id'];
-$tg->msg_id = $tg->input['msg_id'];
+$tg->id      = $tg->input['id'];
+$tg->msg_id  = $tg->input['msg_id'];
 $tg->caption = "file edited !";
-$tg->file = 'file url';
+$tg->file    = 'file url';
 $tg->edit('file type'); // example : image, video, document, audio ,....
 ```
 <a id='7'></a>
@@ -155,6 +156,7 @@ $tg->show_alert = true;
 $tg->text       = 'Hello world !';
 $tg->alert();
 ```
+<a id='8'></a>
 ## Send location
 ```
 $tg->id     = $tg->input['id'];
@@ -173,6 +175,7 @@ $tg->send('contact');
 ## check is join user in channel
 First you should set bot as admin in channel
 ```
+$tg->id = $tg->input['id'];
 if(is_join("@channel")=="left"){
     // user is join
 }else{
