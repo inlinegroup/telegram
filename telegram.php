@@ -42,17 +42,16 @@ class telegram{
            }else{ $this->input['text'] = ""; }
            if(isset($this->data["message"]["caption"])){
                 $this->input['caption']  = $this->data["message"]["caption"];
-            }else{ $this->input['caption'] = ""; }
+            }else{ $this->input['caption']
             if(isset($this->data["message"]["photo"])){
-                $this->input['image']    = $this->data["message"]["photo"];
-                $this->input['file']     = $image[count($image)-1]["file_id"];
+                $this->input['file']     = $this->data["message"]["photo"][count($this->data["message"]["photo"])-1]["file_id"];
                 $this->input['fileType'] = "photo";
             }if(isset($this->data["message"]["document"])){       
                 $this->input['file']     = $this->data["message"]["document"]["file_id"];       
                 $this->input['fileType'] = "document";     
             }if(isset($this->data["message"]["video"])){       
                 $this->input['file']     = $this->data["message"]["video"]["file_id"];       
-                $this->input['fileType'] = "video";     
+                $this->input['fileType'] = "video";    
             }if(isset($this->data["message"]["audio"])){       
                 $this->input['file']     = $this->data["message"]["audio"]["file_id"];       
                 $this->input['fileType'] = "audio";     
@@ -61,7 +60,7 @@ class telegram{
                 $this->input['fileType'] = "voice";
             }
         }elseif(isset($this->data["callback_query"])){
-            $this->input['text']     = $this->data["callback_query"]["data"];
+            $this->input['text']     = $this->data["callback_query"]["data"]
             $this->query_id = $this->input['query_id'] = $this->data["callback_query"]["id"];
             $this->input['id']       = $this->data["callback_query"]["message"]["chat"]["id"];
             $this->input['msg_id']   = $this->data['callback_query']['message']['message_id'];
@@ -70,7 +69,7 @@ class telegram{
         }
         
         $this->id     = $this->input['id'];
-        $this->from   = $this->input['id'];
+        $this->from   = $this->input['id']
         $this->msg_id = $this->input['msg_id'];
         
         $url = "$this->bot_url/getFile";
